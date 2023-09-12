@@ -29,8 +29,14 @@ const Home = () => {
     }
   }, [authState, oktaAuth]); // Update if authState changes
 
+  //const login = async () => {
+  //  await oktaAuth.signInWithRedirect();
+  //};
+
   const login = async () => {
-    await oktaAuth.signInWithRedirect();
+    await oktaAuth.token.getWithRedirect({
+      acrValues: 'urn:okta:loa:2fa:any'
+    })
   };
 
   const resourceServerExamples = [
