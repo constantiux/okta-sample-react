@@ -9,7 +9,7 @@ export default {
     clientId: import.meta.env.VITE_CLIENT_ID,
     issuer: import.meta.env.VITE_ISSUER,
     redirectUri: REDIRECT_URI,
-    scopes: ['openid', 'profile', 'email', 'offline_access', 'okta.myAccount.profile.manage', 'okta.myAccount.email.manage', 'okta.myAccount.phone.manage', 'okta.myAccount.password.manage'],
+    scopes: ['openid', 'profile', 'email', 'offline_access', 'okta.myAccount.email.manage', 'okta.myAccount.phone.manage'],
     pkce: true,
     disableHttpsCheck: OKTA_TESTING_DISABLEHTTPSCHECK,
   },
